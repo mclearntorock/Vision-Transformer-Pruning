@@ -316,7 +316,7 @@ if __name__ == '__main__':
 
     # %%
     # 在测试集上测试剪枝后的模型, 并统计模型的参数数量
-    print('testing the mAP of final pruned model')
+    print('testing the ac of final pruned model')
     with torch.no_grad():
         if args.val:
            compact_model_metric = val(args, compact_model, test_loader)
@@ -325,7 +325,7 @@ if __name__ == '__main__':
     # # 比较剪枝前后参数数量的变化、指标性能的变化
     metric_table = [
         ["Metric", "Before", "After"],
-        ["mAP", f'{origin_model_metric:.6f}', f'{compact_model_metric:.6f}'],
+        ["ac", f'{origin_model_metric:.6f}', f'{compact_model_metric:.6f}'],
         ["Parameters", f"{origin_nparameters}", f"{compact_nparameters}"],
         ["Inference", f'{pruned_forward_time:.4f}', f'{compact_forward_time:.4f}']
     ]
