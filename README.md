@@ -1,5 +1,5 @@
 # Vision-Transformer-Pruning
-Primary codes of a channel pruning method of Vision Transformer based on MLP layers in encoders.
+Primary codes of a Vision Transformer pruning method based on sparse traning and channel pruning of MLP layers in encoders.
 
 Many thanks to https://github.com/tanluren/yolov3-channel-and-layer-pruning.
 
